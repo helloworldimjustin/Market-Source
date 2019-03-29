@@ -17,6 +17,8 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <!--Stock Chart-->
         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script> 
+        <script type="text/javascript" src="node/require.js"></script> 
+        <script type="text/javascript" src="node/test.js"></script> 
         <style>
             * {
                 padding:0 auto;
@@ -432,6 +434,8 @@
                   </div>
                 </div>
             </div>
+                </div>
+            </div>
             <div class="row sectors-row">
                 <div class="row btnContainter">
                     <div class="row"> 
@@ -517,6 +521,7 @@
                         </div>
                     </div>
                   </div>
+                  </div>
                   <div class="row row-global-markets">
                     <div class="row">
                       <div class="col-lg-4">
@@ -591,6 +596,7 @@
                         <!--TradingView Widget END -->
                         </div>
                     </div>
+                  </div>
                   </div>
                   <div class="row row-global-markets">
                     <div class="row">
@@ -667,6 +673,7 @@
                         </div>
                     </div>
                   </div>
+                  </div>
                   <div class="row row-global-markets">
                     <div class="row">
                       <div class="col-lg-4">
@@ -695,6 +702,7 @@
                       </div>
                   </div>
                 </div>
+                </div>
             </div>
 
         </div>
@@ -705,13 +713,12 @@
 
 var closingDates = [];
 var closingPrices = [];
-getGDPData();
-getCPIData();
-getPMIData();
-getPPIData();
 
 $(document).ready(function(){
-
+    getGDPData();
+    getCPIData();
+    getPMIData();
+    getPPIData();
     const CHART4 = document.getElementById("chart4"); 
     console.log(CHART4);
     let linegraph4 = makeGraph(CHART4, ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"], [3000, 3500, 3940, 4100, 4500, 3999]);
